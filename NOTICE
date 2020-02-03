@@ -1,0 +1,5 @@
+This project includes software provided by the following open source
+libraries (see the folder THIRD-PARTY-LICENSES for details about each library):
+
+* log4j
+License: THIRD-PARTY-LICENSES/log4j/LICENSE.txt (Apache License 2.0)
