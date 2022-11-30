@@ -8,7 +8,8 @@ This MigratoryData add-on allows you to log various classes of events using the 
 
 ### Enabling the add-on
 
-This add-on is preinstalled in the MigratoryData server under the following folder according to the package type used to install it:
+This add-on is preinstalled in the MigratoryData server under the following folder,
+according to the package type used to install the MigratoryData server:
 
 | Location                                       | Package type                         |
 |------------------------------------------------|--------------------------------------|
@@ -30,11 +31,11 @@ The add-on is automatically enabled if at least one or more of the following par
 
 ### Modifying the add-on
 
-You can modify the source code of this add-on to fit your needs. The add-on is build the MigratoryData's <a target="_blank" href="https://mvnrepository.com/artifact/com.migratorydata/server-extensions-api">Server Extensions API</a>.
+You can modify the source code of this add-on to fit your needs. The add-on is build with MigratoryData's <a target="_blank" href="https://mvnrepository.com/artifact/com.migratorydata/server-extensions-api">Server Extensions API</a>.
 
 #### Getting the code and building
 
-Download this project by cloning it with the following command or by using any other download method:
+You can use the following commands to get and build the add-on:
 
 ```bash
 $ git clone https://github.com/migratorydata/addon-audit-log4j.git
