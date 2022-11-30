@@ -45,16 +45,16 @@ $ ./gradlew build
 
 #### Deploying the modified add-on
 
-Copy the modified add-on from `addon-audit-log4j/extensions/audit.jar` to the following location of your MigratoryData server installation:
+1. Copy the modified add-on from `addon-audit-log4j/extensions/audit.jar` to the following location of your MigratoryData server installation:
 
 | Location                          | Package type                         |
 |-----------------------------------|--------------------------------------|
 | `extensions/`                     | Platform-independent tarball package |
 | `/etc/migratorydata/extensions/`  | `RPM` or `DEB` Linux package         |
 
-Finally, restart your MigratoryData server in order to reload the audit add-on.
-
 > **Note &mdash;**
 > It is not necessary to delete the log4j add-on `audit.jar` made available under the folder `addons`. Loading a custom audit extension 
 > `audit.jar` from the folder `extensions` takes precedence over loading an off-the-shelf audit extension `audit.jar` made available under 
 > the folder `addons`. Note also that the name of the extension `audit.jar` is fixed, it cannot be changed in order to be loaded by the MigratoryData server. 
+
+2. Finally, restart your MigratoryData server in order to reload the audit add-on.
