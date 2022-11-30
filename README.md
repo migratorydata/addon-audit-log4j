@@ -52,6 +52,8 @@ Copy the modified add-on from `addon-audit-log4j/extensions/audit.jar` to the fo
 | `extensions/`                     | Platform-independent tarball package |
 | `/etc/migratorydata/extensions/`  | `RPM` or `DEB` Linux package         |
 
+Finally, restart your MigratoryData server in order to reload the audit add-on.
+
 > **Note &mdash;**
 > It is not necessary to delete the log4j add-on `audit.jar` made available under the folder `addons`. Loading a custom audit extension 
 > `audit.jar` from the folder `extensions` takes precedence over loading an off-the-shelf audit extension `audit.jar` made available under 
