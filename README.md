@@ -23,7 +23,7 @@ Its default configuration is available under the following folder:
 | `addons/audit-log4j`                        | Platform-independent tarball package |
 | `/etc/migratorydata/addons/audit-log4j`     | `RPM` or `DEB` Linux package         |
 
-The add-on is automatically enabled if at least one or more of the following parameters of the MigratoryData server are set on `true`:
+The add-on is automatically enabled if at least one or more of the following parameters of the MigratoryData server are set on `log4j`:
 * <a target="_blank" href="https://migratorydata.com/docs/migratorydata/configuration/advanced-paramters/#extensionauditaccess">Extension.Audit.Access</a>
 * <a target="_blank" href="https://migratorydata.com/docs/migratorydata/configuration/advanced-paramters/#extensionauditmessage">Extension.Audit.Message</a>
 * <a target="_blank" href="https://migratorydata.com/docs/migratorydata/configuration/advanced-paramters/#extensionauditcache">Extension.Audit.Cache</a>
@@ -40,7 +40,7 @@ You can use the following commands to get and build the add-on:
 ```bash
 $ git clone https://github.com/migratorydata/addon-audit-log4j.git
 $ cd addon-audit-log4j
-$ ./gradlew build
+$ ./gradlew clean build copyJar
 ```
 
 #### Deploying the modified add-on
@@ -50,11 +50,15 @@ $ ./gradlew build
 | Location                          | Package type                         |
 |-----------------------------------|--------------------------------------|
 | `extensions/`                     | Platform-independent tarball package |
-| `/etc/migratorydata/extensions/`  | `RPM` or `DEB` Linux package         |
+| `/usr/share/migratorydata/extensions/`  | `RPM` or `DEB` Linux package         |
 
 > **Note &mdash;**
 > It is not necessary to delete the log4j add-on `audit.jar` made available under the folder `addons`. Loading a custom audit extension 
-> `audit.jar` from the folder `extensions` takes precedence over loading an off-the-shelf audit extension `audit.jar` made available under 
-> the folder `addons`. Note also that the name of the extension `audit.jar` is fixed, it cannot be changed in order to be loaded by the MigratoryData server. 
+> `audit.jar` from the folder `extensions` is possible setting one or more of the following parameters of the MigratoryData server to `true`: 
+* <a target="_blank" href="https://migratorydata.com/docs/migratorydata/configuration/advanced-paramters/#extensionauditaccess">Extension.Audit.Access</a>
+* <a target="_blank" href="https://migratorydata.com/docs/migratorydata/configuration/advanced-paramters/#extensionauditmessage">Extension.Audit.Message</a>
+* <a target="_blank" href="https://migratorydata.com/docs/migratorydata/configuration/advanced-paramters/#extensionauditcache">Extension.Audit.Cache</a>
+* <a target="_blank" href="https://migratorydata.com/docs/migratorydata/configuration/advanced-paramters/#extensionauditstats">Extension.Audit.Stats</a>
+> Note also that the name of the extension `audit.jar` is fixed, it cannot be changed in order to be loaded by the MigratoryData server. 
 
 2. Finally, restart your MigratoryData server in order to reload the audit add-on.
