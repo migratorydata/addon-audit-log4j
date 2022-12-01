@@ -52,13 +52,16 @@ $ ./gradlew clean build copyJar
 | `extensions/`                     | Platform-independent tarball package |
 | `/usr/share/migratorydata/extensions/`  | `RPM` or `DEB` Linux package         |
 
-> **Note &mdash;**
-> It is not necessary to delete the log4j add-on `audit.jar` made available under the folder `addons`. Loading a custom audit extension 
-> `audit.jar` from the folder `extensions` is possible setting one or more of the following parameters of the MigratoryData server to `true`: 
+2. Set on `true` (rather than `log4j`) one or more of the following paramters:
+
 * <a target="_blank" href="https://migratorydata.com/docs/migratorydata/configuration/advanced-paramters/#extensionauditaccess">Extension.Audit.Access</a>
 * <a target="_blank" href="https://migratorydata.com/docs/migratorydata/configuration/advanced-paramters/#extensionauditmessage">Extension.Audit.Message</a>
 * <a target="_blank" href="https://migratorydata.com/docs/migratorydata/configuration/advanced-paramters/#extensionauditcache">Extension.Audit.Cache</a>
 * <a target="_blank" href="https://migratorydata.com/docs/migratorydata/configuration/advanced-paramters/#extensionauditstats">Extension.Audit.Stats</a>
-> Note also that the name of the extension `audit.jar` is fixed, it cannot be changed in order to be loaded by the MigratoryData server. 
 
-2. Finally, restart your MigratoryData server in order to reload the audit add-on.
+
+> **Note &mdash;**
+> It is not necessary to delete the log4j add-on `audit.jar` made available under the folder `addons`. The custom audit extension 
+> `audit.jar` from the folder `extensions` is automatically loading when setting one or more of the above parameters `true` (rather than `log4j`). Note also that the name of the extension `audit.jar` is fixed, it cannot be changed in order to be loaded by the MigratoryData server. 
+
+3. Finally, restart your MigratoryData server in order to reload the audit add-on.
