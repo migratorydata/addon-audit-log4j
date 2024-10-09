@@ -39,6 +39,7 @@ gradle-app.setting
 .gradletasknamecache
 
 extensions/*.jar
+extensions/*.xml
 
 .classpath
 .project

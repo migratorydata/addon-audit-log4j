@@ -45,8 +45,8 @@ build.dependsOn shadowJar
 dependencies {
     compileOnly group: 'com.migratorydata', name: 'server-extensions-api', version: '6.0.1'
 
-    implementation group: 'org.apache.logging.log4j', name: 'log4j-api', version: '2.17.0'
-    implementation group: 'org.apache.logging.log4j', name: 'log4j-core', version: '2.17.0'
+    implementation group: 'org.apache.logging.log4j', name: 'log4j-api', version: '2.24.1'
+    implementation group: 'org.apache.logging.log4j', name: 'log4j-core', version: '2.24.1'
 
     testImplementation 'junit:junit:4.13.2'
 }
